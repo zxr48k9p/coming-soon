@@ -1,15 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-bs-theme="dark">
 <head>
-    <title>Coming Soon | BaseWeight</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseWeight - Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 100px; background: #f4f4f4; }
-        h1 { color: #333; }
-        p { color: #666; font-size: 1.2em; }
+        :root {
+            --bs-primary: #6b8e23; /* Olive Drab matching App Theme */
+            --bs-body-bg: #0f0f0f;
+            --bs-body-color: #e0e0e0;
+        }
+        body {
+            /* Moody Mountain Background matching App Theme */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .glass-card {
+            background-color: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 15px;
+        }
+        .text-primary-custom {
+            color: var(--bs-primary) !important;
+        }
+        .btn-primary-custom {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            color: white;
+            font-weight: 600;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-primary-custom:hover {
+            background-color: #556b2f;
+            border-color: #556b2f;
+            transform: translateY(-2px);
+            color: white;
+        }
+        h1 {
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .feature-box {
+            padding: 15px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .feature-box:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
     </style>
 </head>
 <body>
-    <h1>Something Big is Coming.</h1>
-    <p>My awesome Flask app is currently under development. Stay tuned!</p>
-    </body>
+
+    <div class="container">
+        <div class="row justify-content-center w-100 m-0">
+            <div class="col-lg-8 col-md-10 text-center">
+                
+                <div class="glass-card p-4 p-md-5 my-5">
+                    <div class="mb-4">
+                        <i class="bi bi-compass display-1 text-primary-custom"></i>
+                    </div>
+                    <h1 class="display-4 mb-2">BaseWeight</h1>
+                    <p class="lead text-uppercase letter-spacing-2 mb-4 text-light opacity-75">Coming Soon</p>
+                    
+                    <hr class="border-secondary my-4 w-50 mx-auto">
+                    
+                    <p class="fs-5 mb-5 text-light">
+                        The ultimate desktop companion for hikers and backpackers. <br class="d-none d-md-block">
+                        Bridge the gap between gear inventory management and trip planning.
+                    </p>
+
+                    <div class="row g-4 text-start mt-2">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start feature-box">
+                                <i class="bi bi-backpack fs-3 text-primary-custom me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white">Smart Inventory</h5>
+                                    <p class="small text-muted mb-0">Catalog your gear with weight, cost, and categories. Visualize your pack weight like never before.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start feature-box">
+                                <i class="bi bi-pie-chart fs-3 text-primary-custom me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white">Kit Builder</h5>
+                                    <p class="small text-muted mb-0">Create custom packing lists, analyze weight distribution, and generate professional checklists.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start feature-box">
+                                <i class="bi bi-map fs-3 text-primary-custom me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white">Trip Planning</h5>
+                                    <p class="small text-muted mb-0">Upload GPX files, view elevation profiles, and track trip statistics.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-start feature-box">
+                                <i class="bi bi-trophy fs-3 text-primary-custom me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold text-white">Achievements</h5>
+                                    <p class="small text-muted mb-0">Track your lifetime distance, elevation gain, and unlock hiking milestones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5">
+                        <p class="text-muted small mb-3">Get ready to lighten your load.</p>
+                    </div>
+                </div>
+
+                <footer class="text-muted small mb-4">
+                    &copy; <script>document.write(new Date().getFullYear())</script> BaseWeight. All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
