@@ -11,6 +11,7 @@
             --bs-primary: #6b8e23; /* Olive Drab matching App Theme */
             --bs-body-bg: #0f0f0f;
             --bs-body-color: #e0e0e0;
+            scroll-behavior: smooth;
         }
         body {
             /* Moody Mountain Background matching App Theme */
@@ -19,11 +20,7 @@
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            min-height: 100vh;
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         .glass-card {
             background-color: rgba(30, 30, 30, 0.85);
@@ -64,6 +61,14 @@
         .feature-box:hover {
             background-color: rgba(255, 255, 255, 0.05);
         }
+        .feature-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .feature-link:hover h5 {
+            color: var(--bs-primary) !important;
+        }
     </style>
 </head>
 <body>
@@ -88,40 +93,48 @@
 
                     <div class="row g-4 text-start mt-2">
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start feature-box">
-                                <i class="bi bi-backpack fs-3 text-primary-custom me-3"></i>
-                                <div>
-                                    <h5 class="fw-bold text-white">Smart Inventory</h5>
-                                    <p class="small text-muted mb-0">Catalog your gear with weight, cost, and categories. Visualize your pack weight like never before.</p>
+                            <a href="smart_inventory.html" class="feature-link">
+                                <div class="d-flex align-items-start feature-box">
+                                    <i class="bi bi-backpack fs-3 text-primary-custom me-3"></i>
+                                    <div>
+                                        <h5 class="fw-bold text-white">Smart Inventory</h5>
+                                        <p class="small text-muted mb-0">Catalog your gear with weight, cost, and categories. Visualize your pack weight like never before.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start feature-box">
-                                <i class="bi bi-pie-chart fs-3 text-primary-custom me-3"></i>
-                                <div>
-                                    <h5 class="fw-bold text-white">Kit Builder</h5>
-                                    <p class="small text-muted mb-0">Create custom packing lists, analyze weight distribution, and generate professional checklists.</p>
+                            <a href="kit_builder.html" class="feature-link">
+                                <div class="d-flex align-items-start feature-box">
+                                    <i class="bi bi-pie-chart fs-3 text-primary-custom me-3"></i>
+                                    <div>
+                                        <h5 class="fw-bold text-white">Kit Builder</h5>
+                                        <p class="small text-muted mb-0">Create custom packing lists, analyze weight distribution, and generate professional checklists.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start feature-box">
-                                <i class="bi bi-map fs-3 text-primary-custom me-3"></i>
-                                <div>
-                                    <h5 class="fw-bold text-white">Trip Planning</h5>
-                                    <p class="small text-muted mb-0">Upload GPX files, view elevation profiles, and track trip statistics.</p>
+                            <a href="trip_planning.html" class="feature-link">
+                                <div class="d-flex align-items-start feature-box">
+                                    <i class="bi bi-map fs-3 text-primary-custom me-3"></i>
+                                    <div>
+                                        <h5 class="fw-bold text-white">Trip Planning</h5>
+                                        <p class="small text-muted mb-0">Upload GPX files, view elevation profiles, and track trip statistics.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start feature-box">
-                                <i class="bi bi-trophy fs-3 text-primary-custom me-3"></i>
-                                <div>
-                                    <h5 class="fw-bold text-white">Achievements</h5>
-                                    <p class="small text-muted mb-0">Track your lifetime distance, elevation gain, and unlock hiking milestones.</p>
+                            <a href="stats.html" class="feature-link">
+                                <div class="d-flex align-items-start feature-box">
+                                    <i class="bi bi-percent fs-3 text-primary-custom me-3"></i>
+                                    <div>
+                                        <h5 class="fw-bold text-white">Statistics</h5>
+                                        <p class="small text-muted mb-0">Track your lifetime distance, elevation gain, and unlock hiking milestones.</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -129,7 +142,7 @@
                         <p class="text-muted small mb-3">Get ready to lighten your load.</p>
                     </div>
                 </div>
-
+                
                 <footer class="text-muted small mb-4">
                     &copy; <script>document.write(new Date().getFullYear())</script> BaseWeight. All rights reserved.
                 </footer>

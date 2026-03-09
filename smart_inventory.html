@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseWeight - Smart Inventory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-primary: #6b8e23;
+            --bs-body-bg: #0f0f0f;
+            --bs-body-color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            min-height: 100vh;
+        }
+        .glass-card {
+            background-color: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .text-primary-custom {
+            color: var(--bs-primary) !important;
+        }
+        .img-preview {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        .img-preview:hover {
+            transform: scale(1.02);
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--bs-primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn btn-outline-light back-btn rounded-pill"><i class="bi bi-arrow-left me-2"></i>Back</a>
+
+    <div class="container py-5 mt-5">
+        
+        <!-- Smart Inventory -->
+        <div class="glass-card">
+            <div class="p-4 p-md-5 text-center border-bottom border-secondary">
+                <i class="bi bi-backpack display-4 text-primary-custom mb-3"></i>
+                <h1 class="fw-bold text-white">Smart Inventory</h1>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                    Stop guessing. Start knowing. Catalog every gram and penny of your gear in one centralized, beautiful interface.
+                </p>
+            </div>
+
+            <div class="p-4 p-md-5">
+                <!-- Feature 1: The Catalog -->
+                <div class="row align-items-center mb-5 g-5">
+                    <div class="col-lg-7">
+                        <img src="images/desktop/invent.jpg" class="img-preview" alt="Desktop Inventory Interface">
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="feature-icon"><i class="bi bi-database-check"></i></div>
+                        <h3 class="text-white">The Ultimate Gear Locker</h3>
+                        <p class="text-muted">
+                            Organize your equipment with professional precision. Filter by brand, category, or weight. 
+                            Identify the heavy hitters in your pack instantly.
+                        </p>
+                        <ul class="list-unstyled text-muted mt-3">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary-custom me-2"></i>Sort by weight, cost, or name</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary-custom me-2"></i>Custom categories</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary-custom me-2"></i>Wishlist tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Analytics (Alternating) -->
+                <div class="row align-items-center mb-5 g-5">
+                    <div class="col-lg-5 order-2 order-lg-1">
+                        <div class="feature-icon"><i class="bi bi-graph-up"></i></div>
+                        <h3 class="text-white">Data-Driven Packing</h3>
+                        <p class="text-muted">
+                            Visual charts break down your pack weight. See exactly where you can cut grams and save money.
+                            Understand your base weight vs. consumables at a glance.
+                        </p>
+                    </div>
+                    <div class="col-lg-7 order-1 order-lg-2">
+                        <img src="images/desktop/kit_charts.jpg" class="img-preview" alt="Analytics Charts">
+                    </div>
+                </div>
+
+                <!-- Feature 3: Ticklist -->
+                <div class="row align-items-center mb-5 g-5">
+                    <div class="col-lg-7">
+                        <img src="images/desktop/kit_ticklist.jpg" class="img-preview" alt="Packing Ticklist">
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="feature-icon"><i class="bi bi-clipboard-check"></i></div>
+                        <h3 class="text-white">Never Forget Essentials</h3>
+                        <p class="text-muted">
+                            Built-in interactive tick-lists ensure you leave nothing behind. 
+                            Export your list as a PDF or image to share with hiking buddies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Mobile Companion -->
+                <div class="row g-4 mt-4 border-top border-secondary pt-5">
+                    <div class="col-12 text-center mb-4">
+                        <h3 class="text-white">Your Gear, On The Go</h3>
+                        <p class="text-muted">Access your inventory anywhere with the mobile companion app.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 offset-lg-2">
+                        <img src="images/mobile/invent.jpeg" class="img-preview" alt="Mobile Inventory">
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <img src="images/mobile/item_info.jpeg" class="img-preview" alt="Mobile Item Details">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

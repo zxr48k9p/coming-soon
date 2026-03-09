@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseWeight - Features</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bs-primary: #6b8e23;
+            --bs-body-bg: #0f0f0f;
+            --bs-body-color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .glass-card {
+            background-color: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border-radius: 15px;
+        }
+        .text-primary-custom {
+            color: var(--bs-primary) !important;
+        }
+        .img-preview {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn btn-outline-light back-btn rounded-pill"><i class="bi bi-arrow-left me-2"></i>Back</a>
+
+    <div class="container py-5">
+        
+        <!-- Smart Inventory -->
+        <div id="smart-inventory" class="glass-card p-4 p-md-5 mb-5">
+            <h2 class="text-primary-custom mb-4"><i class="bi bi-backpack me-3"></i>Smart Inventory</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="images/mobile/invent.jpeg" class="img-preview d-md-none" alt="Inventory Mobile">
+                    <img src="images/desktop/invent.jpg" class="img-preview d-none d-md-block" alt="Inventory Desktop">
+                    <h5 class="text-white">Gear Catalog</h5>
+                    <p class="text-muted">Catalog all your hiking gear by weight, cost.. Filter items to get insights into kit.</p>
+                </div>
+                <div class="col-md-6 d-md-none">
+                    <img src="images/mobile/item_info.jpeg" class="img-preview" alt="Item Info">
+                    <h5 class="text-white">Quick Details</h5>
+                    <p class="text-muted">Quickly see details about your kit, how many hours on powerbank, when do you need to waterproof your jacket. etc</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="images/desktop/kit_charts.jpg" class="img-preview" alt="Charts">
+                    <h5 class="text-white">Analytics</h5>
+                    <p class="text-muted">Different graphs for certain areas of kit, learn where to cut weight. Total cost and weight.</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="images/desktop/kit_ticklist.jpg" class="img-preview" alt="Ticklist">
+                    <h5 class="text-white">Tick-list</h5>
+                    <p class="text-muted">Pack everything with the built in tick-ist. Download as image/pdf. Share with your friend.</p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="images/desktop/manage_catagories.jpg" class="img-preview" alt="Categories">
+                    <h5 class="text-white">Custom Categories</h5>
+                    <p class="text-muted">Customise how your pack is set up with catagories. Toggle visibility when creating a pack for.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kit Builder -->
+        <div id="kit-builder" class="glass-card p-4 p-md-5 mb-5">
+            <h2 class="text-primary-custom mb-4"><i class="bi bi-pie-chart me-3"></i>Kit Builder</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="images/mobile/create_kit.jpeg" class="img-preview d-md-none" alt="Create Kit Mobile">
+                    <img src="images/desktop/kit_build.jpg" class="img-preview d-none d-md-block" alt="Create Kit Desktop">
+                    <h5 class="text-white">Build Kits</h5>
+                    <p class="text-muted">Quickly build a kit list with drop down and quick add options for items. option exclude from total in the pack.</p>
+                </div>
+                <div class="col-md-6 d-md-none">
+                    <img src="images/mobile/add_item.jpeg" class="img-preview" alt="Add Item">
+                    <h5 class="text-white">Add Items</h5>
+                    <p class="text-muted">Enter name, brand, weight, cost, image, detailed notes, if you own the item or its wishlisted, and if you want to exclude the item from your stats page</p>
+                </div>
+                <div class="col-md-6 d-md-none">
+                    <img src="images/mobile/saved_kits.jpeg" class="img-preview" alt="Saved Kits">
+                    <h5 class="text-white">Saved Kits</h5>
+                    <p class="text-muted">View your saved kits and filter them as you need for ease of management. Download and share</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trip Planning -->
+        <div id="trip-planning" class="glass-card p-4 p-md-5 mb-5">
+            <h2 class="text-primary-custom mb-4"><i class="bi bi-map me-3"></i>Trip Planning</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="images/mobile/trip_tile.jpeg" class="img-preview d-md-none" alt="Trip Tile Mobile">
+                    <img src="images/desktop/trip.jpg" class="img-preview d-none d-md-block" alt="Trip Desktop">
+                    <h5 class="text-white">Trip Logs</h5>
+                    <p class="text-muted">See the date, days taken, distance, elevation, steps, which kit you used and its weight, the detailed description, image you can upload</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/mobile/trip_an1.jpeg" class="img-preview d-md-none" alt="Trip Analysis Mobile">
+                    <img src="images/desktop/graph.jpg" class="img-preview d-none d-md-block" alt="Trip Graph Desktop">
+                    <h5 class="text-white">Elevation Analysis</h5>
+                    <p class="text-muted d-md-none">See elevation over distance in a graph to help visualise your hike</p>
+                    <p class="text-muted d-none d-md-block">View elevation over distance in a graph for good visualisation, as well as download your gpx file</p>
+                </div>
+                <div class="col-md-6 d-md-none">
+                    <img src="images/mobile/trip_an2.jpeg" class="img-preview" alt="Trip Details">
+                    <h5 class="text-white">Trip Details</h5>
+                    <p class="text-muted">See the date, days taken, distance, elevation, steps, which kit you used and its weight, the detailed description, image you can upload</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements -->
+        <div id="achievements" class="glass-card p-4 p-md-5 mb-5">
+            <h2 class="text-primary-custom mb-4"><i class="bi bi-trophy me-3"></i>Achievements</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="images/mobile/stats.jpeg" class="img-preview d-md-none" alt="Stats Mobile">
+                    <img src="images/desktop/stats.jpg" class="img-preview d-none d-md-block" alt="Stats Desktop">
+                    <h5 class="text-white">Statistics</h5>
+                    <p class="text-muted d-md-none">View most expensive and heaviest items as well as kits.</p>
+                    <p class="text-muted d-none d-md-block">View most expensive and heaviest items as well as kits. Track distance with achievments and total hiked, total spent on gear inventory</p>
+                </div>
+                <div class="col-md-6 d-md-none">
+                    <img src="images/mobile/achiev.jpeg" class="img-preview" alt="Achievements">
+                    <h5 class="text-white">Milestones</h5>
+                    <p class="text-muted">Track distance with achievments and total hiked</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
